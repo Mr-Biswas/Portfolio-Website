@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mr.Biswas|Portfolio</title>
+  <style>
+    /* Reset and layout basics */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #020124;
+      scroll-behavior: smooth;
+      padding-top: 80px; /* space for sticky nav */
+    }
+
+    /* Sticky Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #a1f308e0;
+      color: rgb(250, 14, 2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: #eb0505ea;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #0b07f4;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(to right, #040d52, #a6f54c);
+      color: #f20707;
+      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .quote-top-left {
+      position: absolute;
+      top: 110px;
+      left: 100px;
+      padding: 10px 20px;
+      border-left: 4px solid #16f50a;
+      border-radius: 8px;
+      max-width: 300px;
+      z-index: 10;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .animated-quote {
+      display: inline-block;
+      font-size: 1.1rem;
+      color: #66f6ae;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid rgba(255,255,255,0.5);
+      animation: typing 5s steps(60, end), blink-caret 0.75s step-end infinite;
+    }
+
+    /* Typing animation */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    /* Cursor blinking */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: rgba(255,255,255,0.5) }
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 1100px;
+      width: 100%;
+      height: 350px;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .text-section {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .text-section h1 {
+      font-size: 3.8rem;
+      color: #f3f4f6;
+      margin-bottom: 1.5rem;
+    }
+
+    .text-section p {
+      font-size: 1.8 rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    #typed-text {
+      color: #f7fa23;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    #cursor {
+      color: #e1f6cd;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .resume-button {
+      padding: 0.6rem 1.2rem;
+      background-color: #10eadf;
+      color: rgb(244, 7, 7);
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .resume-button:hover {
+      background-color: #eea9f1;
+    }
+
+    .image-section {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgb(52, 2, 2);
+    background-color: #ffffff;
+    transition: transform 0.3s ease
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav>
+    <div class="logo">Mr.Biswas</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#blogs">InShorts</a>
+      <a href="#contact">Contact</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header id="home">
+    <div class="quote-top-left">
+      <span class="animated-quote">" The best thing about Time is... it always changes. "</span>
+    </div>
+    <div class="header-content">
+      <div class="text-section">
+        <h1>Aritra Biswas</h1>
+        <p>
+          <span id="typed-text"></span><span id="cursor">|</span>
+        </p>
+        <a href="https://drive.google.com/file/d/1rXGfDh4T2_mJGPCo5Tvscso_XKLXMqMe/view?usp=sharing" download class="resume-button">📩 Download Resume</a>
+      </div>
+      <div class="image-section">
+        <img src="Me1.jpg" alt="Aritra's Portfolio Photo" class="profile-image">
+      </div>
+    </div>
+  </header>
+
+  <!-- Sound Effect -->
+  <audio id="typeSound" src="htranchant_01-91654.mp3" preload="auto"></audio>
+
+  <!-- Typing Animation Script -->
+  <script>
+    const phrases = [
+    "Data Analysis using Python & SQL",
+    "Interactive Dashboards with Power BI",
+    "Exploratory Data Analysis (EDA)",
+    "ETL Pipelines & Data Cleaning in Python",
+    "Excel Automation & Advanced Formulas",
+    "Generative AI for Insightful Reporting"
+  ];
+
+    const typedText = document.getElementById('typed-text');
+    const cursor = document.getElementById('cursor');
+    const typeSound = document.getElementById('typeSound');
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let currentPhrase = '';
+    let isDeleting = false;
+    let hasPlayedSound = false;
+
+    function type() {
+      const fullPhrase = phrases[phraseIndex];
+
+      if (isDeleting) {
+        currentPhrase = fullPhrase.substring(0, charIndex--);
+      } else {
+        currentPhrase = fullPhrase.substring(0, charIndex++);
+      }
+
+      typedText.textContent = currentPhrase;
+
+      if (!isDeleting && charIndex === fullPhrase.length) {
+        if (!hasPlayedSound) {
+          typeSound.currentTime = 0;
+          typeSound.play();
+          hasPlayedSound = true;
+        }
+        setTimeout(() => isDeleting = true, 800);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        hasPlayedSound = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+
+      const speed = isDeleting ? 40 : 60;
+      setTimeout(type, speed);
+    }
+
+    type();
+  </script>
+<!-- Place this after the <header> tag and before </body> -->
+
+<!-- About Me Section -->
+<section id="about" style="padding: 60px 20px; background: #e6eb55e4;">
+  <h2 style="text-align:center; color:#0f3460;">Welcome to my Arena</h2>
+  <p style="max-width: 850px; margin: auto; text-align: center; font-size: 1.1rem;">
+
+    Hey, I’m an aspiring Analyst and results-driven freelancer with hands-on experience in data analysis, frontend development, and content creation. Over the course of 11 personal projects and case studies, I’ve developed solutions that blend analytical thinking with clean design and storytelling. My focus is on helping individuals and businesses unlock meaningful insights, streamline reporting, and deliver impactful digital experiences.
+    <br><br>
+    My core technical strengths include working with SQL, Python (Pandas, NumPy, Matplotlib), Power BI, and Excel to handle real-world data problems. I’ve built ETL pipelines, performed exploratory data analysis (EDA), and created automated dashboards that turn raw datasets into decision-making tools. From analyzing 10,000+ e-commerce transactions to cleaning over 1.3 million insurance records, my projects showcase data quality improvement, trend discovery, and business-driven results.
+    <br><br>
+    On the frontend side, I build responsive websites using HTML, CSS, and JavaScript, hosted via GitHub and Netlify. These projects reflect a focus on usability, modern design, and dynamic behavior. I also use Canva, PowerPoint, and Generative AI tools (like ChatGPT and DALL·E 3) to create compelling visual content, product mockups, and reports that enhance storytelling.
+    <br><br>
+    <strong>🎯 Vision:</strong> To partner with organizations and creators that value clarity, innovation, and insight—translating data and design into measurable results that drive real growth.
+  </p>
+</section>
+
+  
+  <!-- Skills Section -->
+  <style>
+    .skills-container {
+      display: grid;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+  
+    .skill-card {
+      background: linear-gradient(to right, #110af1, #320101);
+      color: rgb(243, 140, 241);
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+      font-size: 16px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease-out forwards;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+  
+    .skill-card:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #e8840af5, #1022ef);
+    }
+  
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    /* Staggered animation delay */
+    .skill-card:nth-child(1) { animation-delay: 0.1s; }
+    .skill-card:nth-child(2) { animation-delay: 0.2s; }
+    .skill-card:nth-child(3) { animation-delay: 0.3s; }
+    .skill-card:nth-child(4) { animation-delay: 0.4s; }
+    .skill-card:nth-child(5) { animation-delay: 0.5s; }
+    .skill-card:nth-child(6) { animation-delay: 0.6s; }
+    /* .skill-card:nth-child(7) { animation-delay: 0.7s; }
+    .skill-card:nth-child(8) { animation-delay: 0.8s; }
+    .skill-card:nth-child(9) { animation-delay: 0.9s; } */
+  </style>
+  
+  <section id="skills" style="padding: 60px 20px; background: #baf5f5;">
+    <h2 style="text-align:center; color:#04024e;">Skills</h2>
+  
+    <div class="skills-container">
+      <div class="skill-card">Data Language: Python, SQL</div>
+      <div class="skill-card">Data Preprocessing: Pandas, NumPy, Advanced Excel
+      </div>
+      <div class="skill-card">Frontend Development: HTML, CSS, JavaScript, GitHub, Netlify</div>
+      <div class="skill-card">Data Visualization and Storytelling: Power BI, Matplotlib, PowerPoint</div>
+      <div class="skill-card">Content Creation and Delivery: Canva, Generative AI (ChatGPT, DALL·E 3), Prompt Engineering</div>
+      <div class="skill-card">Tools & Environments: Visual Studio Code, Jupyter Notebook, MySQL Workbench, PostgreSQL</div>
+      <!-- <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">Jupyter Notebook</div>
+      <div class="skill-card">Prompt Engineering</div> -->
+    </div>
+  </section>
+  
+    
+  
+  <section id="projects" style="padding: 60px 20px; background: #fefefe;">
+    <h2 style="text-align:center; color:#0f3460;">Recent Projects</h2>
+    <div style="
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 80px;
+      max-width: 1000px;
+      margin: auto;
+      padding-top: 20px;
+    ">
+      <!-- Project Card 1 -->
+      <div style="
+        background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(68, 1, 1, 0.989);
+        padding: 20px;
+        max-width: 300px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <h3 style="color:#0f3460;">🛒 E-Commerce Sales Analysis</h3>
+        <p>Built a complete data pipeline and Power BI dashboard. Enabled a projected 11% profit margin & 9% revenue growth.</p>
+        <a href="https://github.com/Mr-Biswas/May-June/blob/main/Final%20Presentation.pdf" target="_blank" style="
+          display: inline-block;
+          margin-top: 10px;
+          padding: 8px 16px;
+          background: linear-gradient(to right, #0f3460, #00b894);
+          color: white;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: bold;
+          font-size: 0.95rem;
+          transition: background 0.3s ease;
+        " onmouseover="this.style.background='linear-gradient(to right, #00b894, #0f3460)'" onmouseout="this.style.background='linear-gradient(to right, #0f3460, #00b894)'">
+          🔗 View on GitHub
+        </a>
+      </div>
+            <!-- Project Card 2 -->
+            <div style="
+            background: linear-gradient(to bottom right, #f1f8e9, #ffffff);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(68, 1, 1, 0.993);
+            padding: 20px;
+            max-width: 300px;
+            transition: transform 0.3s ease;
+          " onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <h3 style="color:#0f3460;">📊 Insurance Data Cleansing</h3>
+            <p>Cleaned 1.38M+ rows, resolved 587K duplicates. Improved data quality by 38% with EDA and imputation logic.</p>
+            <a href="https://github.com/Mr-Biswas/May-June/blob/main/P2_EDA_Insurance.pdf" target="_blank" style="
+              display: inline-block;
+              margin-top: 10px;
+              padding: 8px 16px;
+              background: linear-gradient(to right, #0f3460, #00b894);
+              color: white;
+              text-decoration: none;
+              border-radius: 6px;
+              font-weight: bold;
+              font-size: 0.95rem;
+              transition: background 0.3s ease;
+            " onmouseover="this.style.background='linear-gradient(to right, #00b894, #0f3460)'" onmouseout="this.style.background='linear-gradient(to right, #0f3460, #00b894)'">
+              🔗 View on GitHub
+            </a>
+          </div>
+      <!-- Project Card 3 -->
+      <div style="
+        background: linear-gradient(to bottom right, #f1f8e9, #ffffff);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(62, 1, 1, 0.904);
+        padding: 20px;
+        max-width: 300px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <h3 style="color:#0f3460;">👩‍💻 Web Traffic Insights– April Peak Analysis</h3>
+        <p>Analyzed 15K+ sessions; Organic Social drove ~30% engagement post-10PM; Email campaigns led in user retention.</p>
+        <a href="https://github.com/Mr-Biswas/May-June/blob/main/End-to-End%20Web%20Traffic%20Analysis%20Using%20Python.ipynb" target="_blank" style="
+          display: inline-block;
+          margin-top: 10px;
+          padding: 8px 16px;
+          background: linear-gradient(to right, #0f3460, #00b894);
+          color: white;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: bold;
+          font-size: 0.95rem;
+          transition: background 0.3s ease;
+        " onmouseover="this.style.background='linear-gradient(to right, #00b894, #0f3460)'" onmouseout="this.style.background='linear-gradient(to right, #0f3460, #00b894)'">
+          🔗 View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section id="blogs" style="padding: 60px 20px; background: #fefefe;">
+    <h2 style="text-align:center; color:#0f3460;">InShorts</h2>
+    <div style="
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 80px;
+      max-width: 1000px;
+      margin: auto;
+      padding-top: 20px;
+    ">
+      <!-- Blog Card 1 -->
+      <div style="
+        background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(68, 1, 1, 0.989);
+        padding: 20px;
+        max-width: 300px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <h3 style="color:#0f3460;">Generative AI Tools Boost Email Efficiency by 25%</h3>
+        <p>A study found that knowledge workers saved ~3 hours/week (25%) on email using Gen AI assistants</p>
+      </div>
+      <!-- Blog Card 2 -->
+      <div style="
+        background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(68, 1, 1, 0.989);
+        padding: 20px;
+        max-width: 300px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <h3 style="color:#0f3460;">AI-Enhanced Carbon Capture Method – 50% Efficiency Gain</h3>
+        <p>Engineers advanced CO₂ capture technology with AI optimization, boosting efficiency by ≈50%, paving the way for cost-effective carbon reduction.</p>
+      </div>
+      <!-- Blog Card 3 -->
+      <div style="
+        background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(68, 1, 1, 0.989);
+        padding: 20px;
+        max-width: 300px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <h3 style="color:#0f3460;">GitHub Copilot Speeds Coding by 56%</h3>
+        <p>Developers using GitHub Copilot completed tasks about 55.8% faster, enhancing development throughput.</p>
+
+      </div>
+      <!-- Blog Card 4 -->
+      <div style="
+        background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(68, 1, 1, 0.989);
+        padding: 20px;
+        max-width: 300px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <h3 style="color:#0f3460;">Gen AI in Public Sector: Mixed Results</h3>
+        <p>In a field trial, Gen AI improved document task quality by 17% and cut completion time by 34%.</p>
+      </div>                       
+    </div>
+  </section>
+  
+  <!-- Contact Info Section -->
+  <section id="contact" style="padding: 60px 20px; background: #e6f7ff;">
+    <h2 style="text-align:center; color:#0f3460;">Contact Information</h2>
+  
+    <div style="
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    ">
+  
+      <!-- Email Card -->
+      <div style="
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        text-align: center;
+        width: 250px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://img.icons8.com/fluency/48/000000/email.png" alt="Email Icon" />
+        <h3 style="margin-top: 10px; color:#0f3460;">Email</h3>
+        <p><a href="mailto:biswas11aritra@gmail.com" style="color:#00b894; text-decoration:none;">Gmail</a></p>
+      </div>
+  
+      <!-- GitHub Card -->
+      <div style="
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        text-align: center;
+        width: 250px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://img.icons8.com/ios-filled/48/000000/github.png" alt="GitHub Icon" />
+        <h3 style="margin-top: 10px; color:#0f3460;">GitHub</h3>
+        <p><a href="https://github.com/Mr-Biswas/May-June" target="_blank" style="color:#00b894; text-decoration:none;">GitHub</a></p>
+      </div>
+  
+      <!-- LinkedIn Card -->
+      <div style="
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        text-align: center;
+        width: 250px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn Icon" />
+        <h3 style="margin-top: 10px; color:#0f3460;">LinkedIn</h3>
+        <p><a href="https://www.linkedin.com/in/mr-biswas11/" target="_blank" style="color:#00b894; text-decoration:none;">LinkedIn</a></p>
+      </div>
+  
+      <!-- YouTube Card -->
+      <div style="
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        text-align: center;
+        width: 250px;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube Icon" />
+        <h3 style="margin-top: 10px; color:#0f3460;">YouTube</h3>
+        <p><a href="https://www.youtube.com/@MrBiswas-Insight_Architect" target="_blank" style="color:#00b894; text-decoration:none;">YouTube</a></p>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  <!-- FAQ Section -->
+  <section id="faq" style="background-color: #f9f9f9; padding: 60px 20px;">
+    <h2 style="text-align: center; color: #00b894; margin-bottom: 40px;">Frequently Asked Questions</h2>
+  
+    <div style="max-width: 900px; margin: 0 auto;">
+  
+      <div class="faq-section">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Q1. Do you have a career gap?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes, I do have a career gap, but I used this time productively to upskill in SQL, Python, Power BI, and frontend development. I completed 11 projects during this period, ensuring I stayed current with technology and industry trends.
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">
+            Q2. How many project experiences do you have?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            I’ve completed over 11 projects using Python (Pandas, NumPy), SQL, Power BI, Excel, HTML, CSS, JavaScript, Canva, and ChatGPT. These span data analysis, dashboarding, web development, and automation workflows.
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">
+            Q3. What services do you provide?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            I provide data cleaning, EDA, dashboard development (Power BI, Matplotlib), frontend development (HTML, CSS, JS), and content creation using Canva, DALL·E 3, and ChatGPT. I also offer Excel automation and storytelling-focused reporting.
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">
+            Q4. What did you achieve in your latest e-Commerce analytics project?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            In my recent e-Commerce project, I analyzed 10K+ transactions, built an ETL pipeline, created Power BI dashboards showing ₹22L+ revenue, and identified 1,855 unprofitable orders—projecting an 11% profit increase and 15% better delivery strategies.
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">
+            Q5. Tell us about your internship experience.
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            During my internship at Vasundhara Blessings Foundation Trust, I built Excel dashboards to monitor student performance. My work improved academic outcomes by 22% and earned me a ‘Star Performer’ award along with a full-time offer.
+          </div>
+        </div>
+      
+      </div>
+  </section>
+  
+  <style>
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+  
+    .faq-question {
+      background: none;
+      border: none;
+      font-size: 18px;
+      text-align: left;
+      width: 100%;
+      padding: 15px;
+      font-weight: bold;
+      color: #0f0f0f;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      padding: 0 15px;
+      color: #333;
+    }
+  
+    .faq-answer.open {
+      padding: 15px;
+    }
+  
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+  
+    .faq-item.active .icon {
+      transform: rotate(45deg);
+      color: #00b894;
+    }
+  
+    .icon {
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+  </style>
+  
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+  
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-question');
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+  
+        // Close all
+        faqItems.forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-answer').classList.remove('open');
+        });
+  
+        // Toggle current
+        if (!isActive) {
+          item.classList.add('active');
+          item.querySelector('.faq-answer').classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
