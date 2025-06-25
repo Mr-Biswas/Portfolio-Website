@@ -22,6 +22,6 @@ A responsive, animated, and SEO-friendly portfolio website built for an aspiring
 
 ## 🛠️ Technologies Used
 
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Hosting**: GitHub + Netlify
-- **Tools**: Canva, ChatGPT for design and content creation
+**Frontend**: HTML5, CSS3, JavaScript
+**Hosting**: GitHub + Netlify
+**Tools**: Canva, ChatGPT for design and content creation
